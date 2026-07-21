@@ -1,6 +1,44 @@
 const express = require('express');
 const app = express();
-
+// Privacy Policy Page for Meta App Review
+app.get('/privacy', (req, res) => {
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="vi">
+    <head>
+      <meta charset="UTF-8">
+      <title>Chính Sách Bảo Mật - 25 Nm</title>
+      <style>
+        body { font-family: Arial, sans-serif; padding: 30px; max-width: 800px; margin: auto; line-height: 1.6; color: #333; }
+        h1 { color: #d97706; }
+      </style>
+    </head>
+    <body>
+      <h1>Chính Sách Bảo Mật Thông Tin - 25 Nm</h1>
+      <p><em>Cập nhật lần cuối: Tháng 7, 2026</em></p>
+      
+      <p>Tại 25 Nm, chúng tôi tôn trọng sự riêng tư của khách hàng. Chính sách bảo mật này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ thông tin cá nhân của bạn thông qua Facebook Messenger Chatbot.</p>
+      
+      <h2>1. Thông tin chúng tôi thu thập</h2>
+      <p>Chúng tôi chỉ thu thập các thông tin mà bạn tự nguyện cung cấp trong quá trình nhắn tin với chatbot, bao gồm: thông tin xe (hãng xe, dòng xe, năm sản xuất), số điện thoại, địa chỉ nhận dịch vụ và thời gian đặt lịch kiểm tra/bảo dưỡng.</p>
+      
+      <h2>2. Mục đích sử dụng thông tin</h2>
+      <p>Thông tin thu thập được chỉ sử dụng cho các mục đích:</p>
+      <ul>
+        <li>Tư vấn và báo giá gói dịch vụ bảo dưỡng phù hợp cho xe của bạn.</li>
+        <li>Sắp xếp kỹ thuật viên đến kiểm tra và bảo dưỡng xe tận nhà tại khu vực Phú Mỹ Hưng, Quận 7.</li>
+        <li>Liên hệ xác nhận lịch hẹn dịch vụ.</li>
+      </ul>
+      
+      <h2>3. Bảo mật và Chia sẻ dữ liệu</h2>
+      <p>Chúng tôi cam kết không bán, chia sẻ hoặc tiết lộ thông tin cá nhân của bạn cho bất kỳ bên thứ ba nào vì mục đích thương mại.</p>
+      
+      <h2>4. Quyền yêu cầu xóa dữ liệu</h2>
+      <p>Nếu bạn muốn xóa toàn bộ lịch sử tư vấn hoặc thông tin cá nhân đã lưu trữ, vui lòng nhắn tin trực tiếp với trang hoặc liên hệ hotline: <strong>0353 123 224</strong>.</p>
+    </body>
+    </html>
+  `);
+});
 // Serve static images from the 'public' folder
 app.use('/public', express.static('public'));
 app.use(express.json());
