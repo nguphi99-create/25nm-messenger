@@ -1,0 +1,12 @@
+{
+  "name": "25nm-messenger-bot",
+  "version": "1.0.0",
+  "description": "Facebook Messenger Chatbot for 25 Nm Automotive Maintenance",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
